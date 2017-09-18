@@ -1,9 +1,13 @@
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Map
 
 function myMap(arr, callback) {
+	var capitalizedArray = [];
 
-//  CODE INSIDE HERE   //
-
+	for (let i = 0; i < arr.length; i++) {
+		var capitalizedLetter = callback(arr[i],i,arr);
+		capitalizedArray.push(capitalizedLetter);
+	}
+	return capitalizedArray;
 }
 
 /*
