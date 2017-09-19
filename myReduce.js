@@ -5,13 +5,12 @@ function myReduce(arr, callback, initialValue) {
 
 	var currentValue = 0;
 
-	for (let i = 0; i < arr.length; i++) {
-
-		// if (i != 0) {
-		// } else {
-		// 	let currentValue = initialValue;
-		// }
-		// console.log(currentValue);
+	if (i = 0) {
+		var currentValue = callback(initialValue,arr[i],i,arr);
+		console.log(currentValue);
+	}
+	
+	for (let i = 1; i < arr.length; i++) {
 		var currentValue = callback(currentValue,arr[i],i,arr);
 		console.log(currentValue);
 	}
