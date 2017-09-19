@@ -30,8 +30,8 @@ console.log("the end");*/
 
 /* myReduce */
 
-// const numArray = [];
-const numArray = [0,1,10,100,1000];
+//const numArray = [];
+/*const numArray = [0,1,10,100,1000];
 
 let initialValue; // = 192;
 
@@ -42,5 +42,5 @@ var output = myReduce(numArray, function sum(accumulator,currentValue,currentInd
 
 console.log('Testing myReduce');
 console.log(output);
-console.log("the end");
+console.log("the end");*/
 

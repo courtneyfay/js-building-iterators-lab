@@ -7,23 +7,18 @@ function myReduce(arr, callback, initialValue) {
 
 	if (arr.length === 0) {
 
-		return currentValue = 99;
+		return currentValue = initialValue;
 	}
 
 	if (initialValue === undefined) {
 
-		for (let i = 1; i < arr.length; i++) {
-			
-			initialValue = arr[0];
-			
-			// currentValue = callback(initialValue,arr[i],i,arr);
-			// console.log("undefined case: " + currentValue);
+		initialValue = arr[0];
 
-			if (i === 0) {
-				currentValue = callback(initialValue,arr[i],i,arr);
-				console.log(currentValue);
-			}
-			currentValue = callback(currentValue,arr[i],i,arr);
+			currentValue = callback(initialValue,arr[1],1,arr);
+
+		for (let i = 1; i < arr.length - 1; i++) {
+			
+			currentValue = callback(currentValue,arr[i+1],i+1,arr);
 			console.log(currentValue);
 		}
 		return currentValue;
@@ -31,36 +26,13 @@ function myReduce(arr, callback, initialValue) {
 
 	for (let i = 0; i < arr.length; i++) {
 		
-		// console.log(typeof arr[i]);
-
 		if (i === 0) {
-			// console.log(initialValue);
 			currentValue = callback(initialValue,arr[i],i,arr);
-			console.log(currentValue);
 		}
 		currentValue = callback(currentValue,arr[i],i,arr);
-		console.log(currentValue);
 	}
 	return currentValue;
 }
-
-// Things I tried that didn't really work:
-	// console.log("This is the initialValue outside the for loop: " + initialValue);
-	// if (isNaN(i) === true) {
-	// 	console.log("Alert: index is NaN");
-	// } 
-	// else if (i !== 0) {
-	// 	console.log("Alert: index is NOT 0 :" + i);
-	// } else 
-	// if (isNaN(arr[i]) === false) {
-	// console.log(isNaN(initialValue));
-	// console.log(isNaN(initialValue) == true);
-	// console.log(isNaN('a') == true);
-	// if (isNaN(initialValue) == true) {
-	// 	initialValue = arr[0];
-	// 	console.log(initialValue);
-	// }
-	// initialValue = 192;
 
 /*
  Best if you don't code out here.
