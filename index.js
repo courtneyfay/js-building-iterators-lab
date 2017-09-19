@@ -30,15 +30,15 @@ console.log("the end");*/
 
 /* myReduce */
 
-// let numArray = [];
-let numArray = [0,1,10,100,1000];
+// const numArray = [];
+const numArray = [0,1,10,100,1000];
 
-let initialValue = 0;
+let initialValue; // = 192;
 
-var output = myReduce(numArray, function sum(currentValue,newValue,index,array) {
-	var total = newValue + currentValue;
+var output = myReduce(numArray, function sum(accumulator,currentValue,currentIndex,array) {
+	var total = accumulator + currentValue;
 	return total;
-},initialValue );
+}, initialValue);
 
 console.log('Testing myReduce');
 console.log(output);
